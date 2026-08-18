@@ -1,0 +1,347 @@
+/* -------------------- HOME -------------------- */
+.home {
+    position: relative;
+    height: 100%;
+    width: calc(100% - 220px);
+    left: 220px;
+    transition: all 0.5s ease;
+}
+
+.home nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 220px);
+    left: 220px;
+    background: #f7f9ff;
+    height: 80px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;  
+    z-index: 100;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .home nav {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.home nav .sidebar-button {
+    display: flex;
+    color: #005386;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.home nav .sidebar-button .welcome {
+    font-size: 15px;
+    color: #005386;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex: 1;
+    max-width: 320px;
+    margin: 0 15px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 12px;
+    font-size: 16px;
+    color: #005386;
+}
+
+nav .search-box input {
+    width: 100%;
+    height: 40px;
+    padding: 0 40px 0 35px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #005386;
+    box-sizing: border-box;
+}
+
+nav .search-box .btn-search {
+    height: 40px;
+    align-items: center;
+    max-width: 90px;
+    background: #77adff;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+nav .search-box .btn-search:hover {
+    background: #3483fa;
+}
+
+.home nav #nav_icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px; 
+    flex-shrink: 0;
+}
+
+.icon-button {
+    border: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: #005386;
+    transition: color 0.3s ease;
+}
+
+.home nav .profile-details {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    background: #f7f9ff;
+    border: 2px solid #005386;
+    border-radius: 10px;
+    padding: 0 10px 0 2px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+nav .profile-details img {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.admin-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: #005386;
+    cursor: pointer;
+    margin: 0 6px;
+    white-space: nowrap;
+}
+
+.profile-details i {
+    font-size: 12px;
+    color: #005386;
+    cursor: pointer;
+}
+
+/* -------------------- CARDS DE ANÚNCIOS -------------------- */
+.advertisements {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px;
+    padding: 100px 30px 30px;
+    box-sizing: border-box;
+}
+
+.advertisements .advertisement-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.advertisement-card img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.advertisements .advertisement-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #005386;
+    margin-top: 10px;
+    word-break: break-word;
+}
+
+.advertisements .indicator {
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.advertisements .indicator i {
+    color: #005386;
+    margin-right: 5px;
+}
+
+.advertisement-info {
+    text-align: left;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+/* -------------------- MODAL DE EXCLUSÃO (POPUP CENTRALIZADO) -------------------- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    display: none; /* Inicia oculto */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Força a exibição quando o JavaScript altera para flex */
+.modal-overlay[style*="display: flex"] {
+    display: flex !important;
+}
+
+.modal-box {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-icon {
+    font-size: 45px;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.modal-box h3 {
+    font-size: 20px;
+    color: #005386;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.modal-box p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-modal {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-cancelar {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.btn-cancelar:hover {
+    background: #cbd5e1;
+}
+
+.btn-confirmar {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn-confirmar:hover {
+    background: #c0392b;
+}
+
+/* -------------------- POPUP DE NOTIFICAÇÃO (TOAST) -------------------- */
+.toast-notification {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #ffffff;
+    color: #005386;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10000;
+    border-left: 5px solid #2ecc71; /* Verde para sucesso por padrão */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.toast-notification.erro {
+    border-left-color: #e74c3c; /* Vermelho para erro */
+    color: #c0392b;
+}
+
+.toast-notification i {
+    font-size: 20px;
+}
+
+.toast-notification.sucesso i {
+    color: #2ecc71;
+}
+
+.toast-notification.erro i {
+    color: #e74c3c;
+}
+
+/* -------------------- RESPONSIVIDADE -------------------- */
+@media (max-width: 1400px) {
+    .advertisements {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media (max-width: 992px) {
+    .home, .home nav {
+        left: 60px;
+        width: calc(100% - 60px);
+    }
+    .welcome, .search-box {
+        display: none; 
+    }
+    .advertisements {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 576px) {
+    .advertisements {
+        grid-template-columns: 1fr; 
+    }
+}

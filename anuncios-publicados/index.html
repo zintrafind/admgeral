@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peça por Peça | Administrador</title>
+
+    <link rel="icon" type="image/x-icon" href="src/images/favicon.ico">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="src/styles/styles.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo-details">
+            <span class="image">
+                <img src="src/images/logo.png" alt="Logo">
+            </span>
+            <span class="admin">Administrador</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../anuncios-publicados/index.html">
+                    <i class="fa-solid fa-house icon"></i>
+                    <span class="nav-text">Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-chart-column icon"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-layer-group icon"></i>
+                    <span class="nav-text">Categorias</span>
+                </a>
+            </li>
+            <li>
+                <a href="../usuarios-cadastrados/index.html">
+                    <i class="fa-solid fa-users icon"></i>
+                    <span class="nav-text">Usuários</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-gear icon"></i>
+                    <span class="nav-text">Configurações</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="logout">
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-right-from-bracket icon"></i>
+                    <span class="nav-text">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home">
+        <nav>
+            <div class="sidebar-button">
+                <i class="fa-solid fa-bars sidebarBtn"></i>
+                <span class="welcome">Bem-Vindo(a), Zintra Find</span>
+            </div>
+
+            <div class="nav-spacer" style="flex: 1;"></div>
+
+            <div id="nav_icons">
+                <button class="icon-button"><i class="fa-regular fa-bell"></i></button>
+                <button class="icon-button"><i class="fa-regular fa-comment"></i></button>
+            </div>
+
+            <div class="profile-details">
+                <img src="src/images/avatar1.png" alt="Perfil">
+                <span class="admin-name">Zintra Find</span>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </nav>
+
+        <div class="advertisements-container">
+            <div class="advertisements" id="advertisementsList">
+                </div>
+        </div>
+    </section>
+
+    <div id="deleteModal" class="modal-overlay" style="display: none;">
+        <div class="modal-box">
+            <div class="modal-icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h3>Excluir Anúncio</h3>
+            <p>Tem certeza de que deseja excluir este anúncio permanentemente?</p>
+            <div class="modal-buttons">
+                <button id="cancelDeleteBtn" class="btn-modal btn-cancelar">Cancelar</button>
+                <button id="confirmDeleteBtn" class="btn-modal btn-confirmar">Sim, Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastNotification" class="toast-notification" style="display: none;">
+        <i id="toastIcon" class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Anúncio excluído com sucesso!</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>

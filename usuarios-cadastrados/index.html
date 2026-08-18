@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peça por Peça | Administrador</title>
+
+    <link rel="icon" type="image/x-icon" href="src/images/favicon.ico">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="src/styles/styles.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo-details">
+            <span class="image">
+                <img src="src/images/logo.png" alt="Logo">
+            </span>
+            <span class="admin">Administrador</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../anuncios-publicados/index.html">
+                    <i class="fa-solid fa-house icon"></i>
+                    <span class="nav-text">
+                        Início
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-chart-column icon"></i>
+                    <span class="nav-text">
+                        Dashboard
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-layer-group icon"></i>
+                    <span class="nav-text">
+                        Categorias
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="../usuarios cadastrados/index.html">
+                    <i class="fa-solid fa-users icon"></i>
+                    <span class="nav-text">
+                        Usuários
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-gear icon"></i>
+                    <span class="nav-text">
+                        Configurações
+                    </span>
+                </a>
+            </li>
+            
+            </ul>
+
+            <ul class="logout">
+                <li>
+                    <a href="../autenticação/index.html">
+                        <i class="fa-solid fa-right-from-bracket icon"></i>
+                        <span class="nav-text">
+                            Sair
+                        </span>
+                    </a>
+                </li>
+            </ul>
+    </div>
+
+        <section class="home">
+            <nav>
+                <div class="sidebar-button">
+                    <i class="fa-solid fa-bars sidebarBtn"></i>
+                    <span class="welcome">Usuários Cadastrados</span>
+                </div>
+                <div class="search-box">
+                    <input type="search" placeholder="Placa mãe">
+                    <button type="submit" id="btn-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div id="nav_icons">
+                    <button class="icon-button"><i class="fa-regular fa-bell"></i></button>
+                    <button class="icon-button"><i class="fa-regular fa-comment"></i></button>
+                </div>
+
+                <div class="profile-details">
+                    <img src="src/images/avatar1.png" alt="">
+                    <span class="admin-name">Zintra Find</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+            </nav>
+
+     <div class="users-container">
+
+    <div class="users">
+
+        <div class="users-card">
+            <img src="src/images/avatar2.png" alt="celular">
+
+            <div class="user-info">
+                <div class="user-title">
+
+                </div>
+
+                <div class="indicator">
+                    <p class="user-description">
+                        <i class="fa-solid fa-user"></i>
+                        João Silva
+                    </p>
+
+                    <p class="user-quantity">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span class="quantity">Trocas realizadas:</span> 3
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="users-card">
+            <img src="src/images/avatar2.png" alt="mouse">
+
+            <div class="user-info">
+                <div class="user-title">
+
+                </div>
+
+                <div class="indicator">
+                    <p class="user-description">
+                        <i class="fa-solid fa-user"></i>
+                        Alexandre Soares
+                    </p>
+
+                    <p class="user-quantity">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span class="quantity">Trocas realizadas:</span> 10
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="users-card">
+            <img src="src/images/avatar2.png" alt="teclado">
+
+            <div class="user-info">
+                <div class="user-title">
+
+                </div>
+
+                <div class="indicator">
+                    <p class="user-description">
+                        <i class="fa-solid fa-user"></i>
+                        Matheus da Silva
+                    </p>
+
+                    <p class="user-quantity">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span class="quantity">Trocas realizadas:</span> 3
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="users-card">
+            <img src="src/images/avatar1.png" alt="placa-mae">
+
+            <div class="user-info">
+                <div class="user-title">
+
+                </div>
+
+                <div class="indicator">
+                    <p class="user-description">
+                        <i class="fa-solid fa-user"></i>
+                        Manuela dos Santos
+                    </p>
+
+                    <p class="user-quantity">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span class="quantity">Trocas realizadas:</span> 8
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="users-card">
+            <img src="src/images/avatar1.png" alt="bateria">
+
+            <div class="user-info">
+                <div class="user-title">
+
+                </div>
+
+                <div class="indicator">
+                    <p class="user-description">
+                        <i class="fa-solid fa-user"></i>
+                        Daniela Andrade
+                    </p>
+
+                    <p class="user-quantity">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span class="quantity">Trocas realizadas:</span> 2
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+    <div id="custom-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-box">
+            <i class="fa-solid fa-triangle-exclamation modal-icon"></i>
+            <h3>Atenção</h3>
+            <p id="modal-mensagem">Deseja realmente realizar esta ação?</p>
+            <div class="modal-buttons">
+                <button id="modal-btn-nao" class="btn-nao">Cancelar</button>
+                <button id="modal-btn-sim" class="btn-sim">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>

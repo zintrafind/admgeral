@@ -1,0 +1,139 @@
+header{
+    width: 100%;
+    padding: 28px 8%;
+    position: sticky;
+    top: 0;
+    background-color: #FEFEFE;
+    z-index: 3;
+}
+
+#mobile_menu{
+    display: none;
+}
+
+#mobile_nav_list li {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+#mobile_nav_list a {
+    text-decoration: none;
+    color: #071820;
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+#mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+
+#nav_logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  transform: scale(2.0); /* aumenta a logo */
+  transform-origin: center;
+}
+
+.logo-img:hover {
+  transform: scale(2.0); /* impede redução ao passar o mouse */
+}
+
+
+#navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav_list{
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+.nav-item a{
+    position: relative;
+    text-decoration: none;
+    color: #0090d2;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* tracinho animado */
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #0099ff;
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* hover e ativo com animação suave */
+.nav-item.active a::after,
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.nav-item.active a,
+.nav-item a:hover {
+    color: #2f5d73;
+}
+
+#mobile_btn{
+    display: none;
+}
+
+@media screen and (max-width: 1170px){
+
+    #nav_list,
+    #navbar .btn-default{
+        display: none;
+    }
+
+    .logo-img{
+        display: none;
+    }
+
+    #mobile_btn{
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #mobile_menu.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item{
+        list-style: none;
+        text-align: center;
+    }
+}
+
+

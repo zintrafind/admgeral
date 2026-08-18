@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peça por Peça | Landing Page</title>
+
+    <link rel="icon" type="image/x-icon" href="src/images/favicon.ico">
+
+    <!-- Biblioteca de Animação -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Fonts e Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="src/styles/styles.css">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav id="navbar">
+        <a href="#home" id="nav_logo">
+             <img src="src/images/logo.png" alt="Logo ZintraFind" class="logo-img">
+        </a>
+            <ul id="nav_list">
+                <li class="nav-item active"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#benefits">Benefícios</a></li>
+                <li class="nav-item"><a href="#testimonials">Depoimentos</a></li>
+            </ul>
+
+             <a href="../autenticação/index.html" class="btn-default">Cadastra-se</a>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Menu Mobile -->
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#benefits">Benefícios</a></li>
+                <li class="nav-item"><a href="#testimonials">Depoimentos</a></li>
+            </ul>
+
+            <a href="../AUTENTICAÇÃO/ADMIN/index.html" class="btn-default">Cadastra-se</a>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="content">
+        <!-- === Seção Home === -->
+        <section id="home">
+            <div class="shape"></div>
+
+            <div id="cta">
+                <h1 class="title">
+                       
+                 A Plataforma de <span>Escambo</span> de <span>Peças Eletrônicas</span></h1>
+
+                <p class="description">
+                    Conecte usuários para troca de peças eletrônicas e gerencie anúncios, perfis e publicações em um único painel.
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#benefits" class="btn-default">Ver Beneficios</a>
+
+                </div>
+
+            </div>
+
+            <div id="banner">
+                <img src="src/images/banner7.png" alt="Banner de cosméticos">
+            </div>
+        </section>
+
+<!-- === Seção Benefícios === -->
+<section id="benefits">
+    <h2 class="section-title">Benefícios da Plataforma Peça por Peça</h2>
+    <h3 class="section-subtitle">Mais controle, organização e praticidade para administrar sua plataforma de trocas.</h3>
+
+    <div id="benefits_list">
+
+        <!-- Benefício 1 -->
+        <div class="benefit sr-benefit">
+            <div class="benefit-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3 class="benefit-title">Gestão Completa</h3>
+            <p class="benefit-description">
+                Administre anúncios, usuários e publicações em um único painel.
+            </p>
+        </div>
+
+        <!-- Benefício 2 -->
+        <div class="benefit sr-benefit">
+            <div class="benefit-icon"><i class="fa-solid fa-store"></i></div>
+            <h3 class="benefit-title">Organização Simplificada</h3>
+            <p class="benefit-description">
+               Mantenha todas as trocas e informações centralizadas e acessíveis.
+            </p>
+        </div>
+
+        <!-- Benefício 3 -->
+        <div class="benefit sr-benefit">
+            <div class="benefit-icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <h3 class="benefit-title">Controle de Conteúdo</h3>
+            <p class="benefit-description">
+               Aprove, edite e monitore anúncios com rapidez e segurança.
+            </p>
+        </div>
+
+        <!-- Benefício 4 -->
+        <div class="benefit sr-benefit">
+            <div class="benefit-icon"><i class="fa-solid fa-headset"></i></div>
+            <h3 class="benefit-title">Comunidade Conectada</h3>
+            <p class="benefit-description">
+                Facilite o encontro entre pessoas interessadas em trocar peças e componentes eletrônicos.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+        <!-- === Seção Avaliações === -->
+        <section id="testimonials">
+            <img src="src/images/foto2.png" id="testimonials_foto" alt="Clientes satisfeitos">
+
+            <div id="testimonials_content">
+                <h2 class="section-title">O que nossas empresas parceiras dizem</h2>
+                <h3 class="section-subtitle">Opiniões reais de quem já utilizou nosso site!</h3>
+
+                <div id="feedbacks">
+                    <div class="feedback">
+                        <img src="src/images/avatar2.png" class="feedback-avatar" alt="Avatar cliente 1">
+                        <div class="feedback-content">
+                            <p>
+                                Carlos Silva
+                                <span>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                “O aplicativo facilitou muito a troca de componentes eletrônicos que eu não utilizava mais. Consegui encontrar peças compatíveis rapidamente e negociar com outros usuários de forma simples.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feedback">
+                        <img src="src/images/avatar1.png" class="feedback-avatar" alt="Avatar cliente 2">
+                        <div class="feedback-content">
+                            <p>
+                                Mariana Souza
+                                <span>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                “Gostei da proposta de escambo de peças eletrônicas. A plataforma é intuitiva e ajudou a reduzir custos em projetos de manutenção e montagem de equipamentos.”</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-default">Veja mais depoimentos</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <img src="src/images/wave.svg" alt="Onda decorativa">
+
+        <div id="footer_items">
+            <span id="copyright">
+                &copy; 2026 Desenvolvido por ZintraFind. Todos os direitos reservados
+            </span>
+
+
+            <div class="social-media-buttons">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>

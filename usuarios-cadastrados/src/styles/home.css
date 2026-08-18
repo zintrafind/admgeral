@@ -1,0 +1,456 @@
+/* -------------------- HOME -------------------- */
+.home {
+    position: relative;
+    height: 100%;
+    width: calc(100% - 220px);
+    left: 220px;
+    transition: all 0.5s ease;
+}
+
+.home nav {
+    position: fixed;
+    width: calc(100% - 220px);
+    left: 220px;
+    background: #f7f9ff;
+    height: 80px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;  
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .home nav {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.home nav .sidebar-button {
+    display: flex;
+    color: #005386;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.home nav .sidebar-button .welcome {
+    font-size: 18px;
+    color: #005386;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex:1;
+    max-width:420px;
+    min-width:120px;
+}
+
+.search-box i {
+    left: 10px;
+    font-size: 18px;
+    color: #005386;
+    transition: all 0.5s ease;
+}
+
+.search-box i:hover {
+    color: #3483fa;
+}
+
+.search-box button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+nav .search-box input {
+    width: 100%;
+    height: 40px;
+    padding: 0 50px 0 15px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #005386;
+    box-sizing: border-box;
+}
+
+nav .search-box .btn-search {
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    max-width: 90px;
+    background: #77adff;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+nav .search-box .btn-search:hover {
+    background: #3483fa;
+}
+
+.home nav #nav_icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 70px;
+}
+
+.icon-button {
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: #005386;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.home nav .profile-details {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    min-width: 120px;
+    background: #f7f9ff;
+    border: 2px solid #005386;
+    border-radius: 10px;
+    padding: 0 15px 0 2px;
+}
+
+nav .profile-details img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+}
+
+.admin-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #005386;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.profile-details i {
+    font-size: 14px;
+    color: #005386;
+    cursor: pointer;
+}
+
+.users{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+    padding:100px 20px 20px;
+}
+
+/* ===== CORREÇÃO DOS CARDS ===== */
+.users .users-card {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    flex: 1;
+}
+
+.users-card {
+    height: auto;               /* Remove a altura fixa de 260px que cortava o conteúdo */
+    min-height: 290px;          /* Garante uma altura mínima padrão confortável */
+    width: 100%;
+    max-width: 220px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;              /* Ativa o Flexbox */
+    flex-direction: column;     /* Organiza os itens em coluna */
+    justify-content: space-between; /* Distribui o espaço e joga o botão para o final */
+}
+
+.users-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.users .user-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #005386;
+}
+
+.users .indicator {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.users .indicator i {
+    color: #005386;
+    padding: 4px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.user-info {
+    text-align: left;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+/* Estilos do Modal Customizado */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-box {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: scaleUp 0.3s ease;
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-icon {
+    font-size: 40px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.modal-box h3 {
+    color: #005386;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.modal-box p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-nao {
+    background: #ddd;
+    color: #333;
+}
+
+.btn-nao:hover {
+    background: #ccc;
+}
+
+.btn-sim {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn-sim:hover {
+    background: #c0392b;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width:1200px){
+
+    .home nav{
+        padding:0 15px;
+    }
+
+    .welcome{
+        font-size:16px;
+    }
+
+    .search-box{
+        max-width:300px;
+    }
+
+    #nav_icons{
+        gap:20px;
+    }
+
+    .profile-details{
+        min-width:170px;
+        padding:0 10px;
+    }
+
+    .profile-details img{
+        width:45px;
+        height:45px;
+    }
+
+    .admin-name{
+        font-size:14px;
+    }
+
+}
+
+@media (max-width:992px){
+
+    .home{
+        left:60px;
+        width:calc(100% - 60px);
+    }
+
+    .home nav{
+        left:60px;
+        width:calc(100% - 60px);
+    }
+
+    .users{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:20px;
+    }
+
+    .welcome{
+        font-size:14px;
+    }
+
+    .search-box{
+        max-width:230px;
+    }
+
+    .search-box input{
+        font-size:14px;
+    }
+
+    #nav_icons{
+        gap:15px;
+    }
+
+    .icon-button{
+        font-size:20px;
+    }
+
+    .profile-details{
+        min-width:130px;
+    }
+
+    .profile-details img{
+        width:40px;
+        height:40px;
+    }
+
+    .admin-name{
+        font-size:13px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .welcome{
+        display:none;
+    }
+
+    .search-box{
+        max-width:180px;
+    }
+
+    .search-box input{
+        font-size:13px;
+    }
+
+    #nav_icons{
+        gap:10px;
+    }
+
+    .icon-button{
+        font-size:18px;
+    }
+
+    .profile-details{
+        min-width:55px;
+        border:none;
+        background:none;
+        padding:0;
+    }
+
+    .admin-name{
+        display:none;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .sidebar-button{
+        display:none;
+    }
+
+    .search-box{
+        max-width:140px;
+    }
+
+    .search-box input{
+        height:35px;
+        font-size:12px;
+    }
+
+    .search-box button{
+        font-size:14px;
+    }
+
+    #nav_icons{
+        gap:8px;
+    }
+
+    .icon-button{
+        font-size:17px;
+    }
+
+    .profile-details{
+        min-width:auto;
+    }
+
+    .profile-details img{
+        width:35px;
+        height:35px;
+    }
+
+}
