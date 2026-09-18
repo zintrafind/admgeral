@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Peça por Peça | Dashboard</title>
+
+    <link rel="icon" type="image/x-icon" href="src/images/favicon.ico">
+
+    <!-- Biblioteca de Animação -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="src/styles/styles.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <div class="sidebar">
+
+        <div class="logo-details">
+
+            <span class="image">
+                <img src="src/images/logo.png" alt="Logo">
+            </span>
+
+            <span class="admin">
+                Administrador
+            </span>
+
+        </div>
+
+        <ul class="nav-links">
+
+            <!-- INÍCIO -->
+            <li>
+                <a href="../anuncios-publicados/index.html">
+
+                    <i class="fa-solid fa-house icon"></i>
+
+                    <span class="nav-text">
+                        Início
+                    </span>
+
+                </a>
+            </li>
+
+            <!-- DASHBOARD -->
+            <li>
+                <a href="../dashboard/index.html">
+
+                    <i class="fa-solid fa-chart-column icon"></i>
+
+                    <span class="nav-text">
+                        Dashboard
+                    </span>
+
+                </a>
+            </li>
+
+            <!-- CATEGORIAS -->
+            <li>
+                <a href="#">
+
+                    <i class="fa-solid fa-layer-group icon"></i>
+
+                    <span class="nav-text">
+                        Categorias
+                    </span>
+
+                </a>
+            </li>
+
+            <!-- USUÁRIOS -->
+            <li>
+                <a href="../usuarios-cadastrados/index.html">
+
+                    <i class="fa-solid fa-users icon"></i>
+
+                    <span class="nav-text">
+                        Usuários
+                    </span>
+
+                </a>
+            </li>
+
+            <!-- CONFIGURAÇÕES -->
+            <li>
+                <a href="#">
+
+                    <i class="fa-solid fa-gear icon"></i>
+
+                    <span class="nav-text">
+                        Configurações
+                    </span>
+
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- SAIR -->
+
+        <ul class="logout">
+
+            <li>
+
+                <a href="../autenticação/index.html">
+
+                    <i class="fa-solid fa-right-from-bracket icon"></i>
+
+                    <span class="nav-text">
+                        Sair
+                    </span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section class="home">
+
+        <!-- NAVBAR -->
+
+        <nav>
+
+            <div class="sidebar-button">
+
+                <i class="fa-solid fa-bars sidebarBtn"></i>
+
+                <span class="welcome">
+                    Dashboard
+                </span>
+
+            </div>
+
+
+            <!-- PESQUISA -->
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    placeholder="Pesquisar"
+                >
+
+                <button
+                    type="submit"
+                    id="btn-button"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ÍCONES -->
+
+            <div id="nav_icons">
+
+                <button class="icon-button">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+                <button class="icon-button">
+
+                    <i class="fa-regular fa-comment"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- PERFIL -->
+
+            <div class="profile-details">
+
+                <img
+                    src="src/images/avatar1.png"
+                    alt="Avatar"
+                >
+
+                <span class="admin-name">
+                    Zintra Find
+                </span>
+
+                <i class="fa-solid fa-angle-down"></i>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================= CONTEÚDO ================= -->
+
+        <main class="dashboard-content">
+
+            <div class="dashboard-header">
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Visão geral do sistema Peça por Peça
+                </p>
+
+            </div>
+
+
+            <!-- ================= CARDS ================= -->
+
+            <div class="dashboard-cards">
+
+
+                <!-- USUÁRIOS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Usuários cadastrados
+                        </span>
+
+                        <strong id="totalUsuarios">
+                            ...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ANÚNCIOS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-box-open"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Anúncios publicados
+                        </span>
+
+                        <strong id="totalAnuncios">
+                            ...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- USUÁRIOS ATIVOS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Usuários ativos
+                        </span>
+
+                        <strong id="usuariosAtivos">
+                            ...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ANÚNCIOS DISPONÍVEIS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Anúncios disponíveis
+                        </span>
+
+                        <strong id="anunciosDisponiveis">
+                            ...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= INFORMAÇÕES ================= -->
+
+            <div class="dashboard-info">
+
+
+                <!-- RESUMO -->
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <h2>
+                            Resumo do sistema
+                        </h2>
+
+                    </div>
+
+                    <div class="panel-content">
+
+                        <p>
+                            O Dashboard apresenta informações gerais
+                            dos usuários e anúncios cadastrados no
+                            sistema.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACESSOS RÁPIDOS -->
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <h2>
+                            Acessos rápidos
+                        </h2>
+
+                    </div>
+
+                    <div class="quick-actions">
+
+                        <a href="../usuarios-cadastrados/index.html">
+
+                            <i class="fa-solid fa-users"></i>
+
+                            <span>
+                                Gerenciar usuários
+                            </span>
+
+                        </a>
+
+
+                        <a href="../anuncios-publicados/index.html">
+
+                            <i class="fa-solid fa-box-open"></i>
+
+                            <span>
+                                Gerenciar anúncios
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- ================= VLibras ================= -->
+
+    <div vw class="enabled">
+
+        <div vw-access-button class="active"></div>
+
+        <div vw-plugin-wrapper>
+
+            <div class="vw-plugin-top-wrapper"></div>
+
+        </div>
+
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app'
+        );
+
+    </script>
+
+
+    <!-- jQuery -->
+
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+
+
+    <!-- JavaScript do Dashboard -->
+
+    <script src="src/javascript/script.js"></script>
+
+</body>
+
+</html>

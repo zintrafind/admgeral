@@ -152,8 +152,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!confirmado) return;
 
         try {
-            const response = await fetch(`http://127.0.0.1:8000/api/users/${id}`, {
-                method: 'DELETE',
+            const response = await fetch(`http://127.0.0.1:8000/api/admin/users/${id}`, {                method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Accept': 'application/json'
