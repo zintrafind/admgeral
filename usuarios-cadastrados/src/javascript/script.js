@@ -233,32 +233,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function formatarData(data) {
 
-        if (!data) {
-            return "Não informado";
-        }
-
-
-        const objetoData = new Date(data);
-
-
-        if (Number.isNaN(objetoData.getTime())) {
-
-            return data;
-
-        }
-
-
-        return objetoData.toLocaleString(
-            "pt-BR",
-            {
-                day: "2-digit",
-                month: "2-digit",
-                year: "numeric",
-                hour: "2-digit",
-                minute: "2-digit"
-            }
-        );
+    if (!data) {
+        return "Não informado";
     }
+
+    const dataTexto = String(data);
+
+    const dataParte = dataTexto.substring(0, 10);
+    const horaParte = dataTexto.substring(11, 16);
+
+    const partes = dataParte.split("-");
+
+    if (partes.length !== 3) {
+        return data;
+    }
+
+    const ano = partes[0];
+    const mes = partes[1];
+    const dia = partes[2];
+
+    return `${dia}/${mes}/${ano}, ${horaParte}`;
+}
 
 
     // ============================================================

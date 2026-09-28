@@ -304,10 +304,22 @@ try {
             `Usuário ID: ${anuncio.id_usuario || "Mobile"}`;
 
 
-        const categoriaInfo =
-            anuncio.nome_categoria ||
-            `Categoria ID: ${anuncio.id_categoria || "Geral"}`;
+        const categoriasMap = {
+    1: "Hardware",
+    2: "Computador e notebook",
+    3: "Celular e tablet",
+    4: "Memórias e pen drives",
+    5: "Fontes e carregadores",
+    6: "Impressoras e adaptadores",
+    7: "Consoles e videogames",
+    8: "Câmeras",
+    9: "Outros"
+};
 
+const categoriaInfo =
+    anuncio.nome_categoria ||
+    categoriasMap[anuncio.id_categoria] ||
+    "Categoria não informada";
 
         const statusProduto =
             anuncio.st_status || "A";
@@ -400,10 +412,10 @@ try {
                         <i class="fa-solid fa-circle-info"></i>
 
                         <span class="quantity">
-                            Status:
-                        </span>
+                            Categoria:
+                                </span>
 
-                        ${statusTexto}
+                            ${categoriaInfo}
 
                     </p>
 
@@ -671,8 +683,8 @@ const email =
 
 const categoria =
     anuncio.nome_categoria ||
-    `Categoria ID: ${anuncio.id_categoria || "Não informada"}`;
-
+    categoriasMap[anuncio.id_categoria] ||
+    "Não informada";
 
 let condicao =
     anuncio.st_condicao ||
