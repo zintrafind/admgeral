@@ -5,7 +5,7 @@
     width: 220px;
     top: 0;
     left: 0;
-    background: #E4F8FF;
+    background: #005386;
     z-index: 1000;
     transition: all 0.5s ease;
 }
@@ -39,22 +39,12 @@
     transform: scale(2.2); /* aumenta a logo */
   }
 
-  .sidebar .logo-details .admin {
+.sidebar .logo-details .admin {
     opacity: 1;
     font-size: 16px;
     font-weight: 500;
-    color: #2f5d73;
+    color: #E4F8FF;
     margin-left: 8px;
-
-    transition: opacity 0.2s ease;
-    transition-delay: 0.2s;
-}
-
-.sidebar.active .logo-details .admin {
-    opacity: 0;
-    pointer-events: none;
-
-    transition-delay: 0s;
 }
 
 .sidebar .nav-links {
@@ -74,30 +64,32 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    transition: opacity 0.2s ease;
-    transition-delay: 0.2s;
+    transition: all 0.4s ease;
 }
 
 .sidebar .nav-links li a:hover {
-    background: #adc6fa;
+    background: #0099FF;
 }
 
 .sidebar .nav-links li a i {
     min-width: 60px;
     text-align: center;
-    color: #2f5d73;
+    color: #E4F8FF;
     font-size: 18px;
-    transition: all 0.4s ease;
 }
 
 .sidebar .nav-links li a .nav-text {
     opacity: 1;
-    color: #005386;
+    color: #E4F8FF;
     font-size: 15px;
     font-weight: 500;
     white-space: nowrap;
-    transition: opacity 0.2s ease;
-    transition-delay: 0.2s;
+}
+
+.sidebar .nav-links li a .nav-text :hover {
+    min-width: 60px;
+    text-align: center;
+    font-size: 18px;
 }
 
 .sidebar.active ~ .home {
@@ -108,7 +100,6 @@
 .sidebar.active .nav-links li a .nav-text {
     opacity: 0;
     pointer-events: none;
-    transition-delay: 0s;
 }
 
 .sidebar .logout {
@@ -129,10 +120,6 @@
     align-items: center;
     text-decoration: none;
     transition: all 0.4s ease;
-}
-
-.sidebar .logout li a:hover {
-    background: #0099FF;
 }
 
 .sidebar .logout li a i {

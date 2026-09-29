@@ -1,0 +1,1335 @@
+/* ============================================================
+   HOME
+   ============================================================ */
+
+.home {
+    position: relative;
+    height: 100%;
+    width: calc(100% - 220px);
+    left: 220px;
+    transition: all 0.5s ease;
+}
+
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+
+.home nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: calc(100% - 220px);
+    left: 220px;
+
+    height: 80px;
+
+    padding: 0 25px;
+
+    background: #f7f9ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 100;
+
+    box-sizing: border-box;
+
+    transition: all 0.5s ease;
+}
+
+
+/* SIDEBAR ABERTA/FECHADA */
+
+.sidebar.active ~ .home nav {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+
+/* ============================================================
+   BOTÃO SIDEBAR + BEM-VINDO
+   ============================================================ */
+
+.home nav .sidebar-button {
+    display: flex;
+
+    align-items: center;
+
+    color: #005386;
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+
+.home nav .sidebar-button .welcome {
+    margin-left: 12px;
+    margin-right: 10px;
+
+    color: #005386;
+
+    font-size: 15px;
+
+    font-weight: 400;
+}
+
+
+/* ============================================================
+   SEARCH BOX
+   ============================================================ */
+
+.search-box {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    flex: 1;
+
+    width: 100%;
+    max-width: 320px;
+
+    margin: 0 15px;
+}
+
+
+.search-box i {
+    position: absolute;
+
+    left: 12px;
+
+    color: #005386;
+
+    font-size: 16px;
+}
+
+
+nav .search-box input {
+    width: 100%;
+
+    height: 40px;
+
+    padding: 0 40px 0 35px;
+
+    border: 2px solid #005386;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+}
+
+
+nav .search-box .btn-search {
+    height: 40px;
+
+    max-width: 90px;
+
+    border: none;
+
+    background: #77adff;
+
+    color: #fff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+nav .search-box .btn-search:hover {
+    background: #3483fa;
+}
+
+
+/* ============================================================
+   ÍCONES DA NAVBAR
+   ============================================================ */
+
+.home nav #nav_icons {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    margin-right: 18px;
+
+    flex-shrink: 0;
+}
+
+
+.icon-button {
+    position: relative;
+
+    border: none;
+
+    background: none;
+
+    color: #005386;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+
+.icon-button:hover {
+    color: #3483fa;
+}
+
+
+/* ============================================================
+   PERFIL DO ADMINISTRADOR
+   ============================================================ */
+
+.home nav .profile-details {
+    display: flex;
+
+    align-items: center;
+
+    height: 45px;
+
+    padding: 0 11px 0 3px;
+
+    background: #f7f9ff;
+
+    border: 2px solid #005386;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    flex-shrink: 0;
+}
+
+
+nav .profile-details img {
+    width: 35px;
+    height: 35px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+.admin-name {
+    margin: 0 7px;
+
+    color: #005386;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+
+.profile-details i {
+    color: #005386;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   CARDS DE ANÚNCIOS
+   ============================================================ */
+
+.advertisements {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    padding: 100px 30px 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.advertisements .advertisement-card {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    min-height: 390px;
+
+    padding: 15px;
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.05);
+
+    box-sizing: border-box;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.advertisements .advertisement-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ============================================================
+   IMAGEM DO ANÚNCIO
+   ============================================================ */
+
+.advertisement-card img {
+    display: block;
+
+    width: 100%;
+    height: 160px;
+
+    margin: 0 auto;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+
+/* ============================================================
+   TÍTULO DO ANÚNCIO
+   ============================================================ */
+
+.advertisements .advertisement-title {
+    margin-top: 10px;
+
+    color: #005386;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    word-break: break-word;
+}
+
+
+/* ============================================================
+   INFORMAÇÕES DO ANÚNCIO
+   ============================================================ */
+
+.advertisements .indicator {
+    margin-top: 8px;
+
+    font-size: 13px;
+}
+
+
+.advertisements .indicator p {
+    margin-bottom: 5px;
+
+    color: #666;
+}
+
+
+.advertisements .indicator i {
+    margin-right: 5px;
+
+    color: #005386;
+}
+
+
+.advertisement-info {
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+    text-align: left;
+}
+
+
+/* ============================================================
+   ÁREA DOS BOTÕES
+   ============================================================ */
+
+.advertisement-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+
+.advertisement-actions button {
+    width: 100%;
+
+    padding: 9px 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.advertisement-actions button i {
+    margin-right: 5px;
+}
+
+
+/* ============================================================
+   BOTÃO VISUALIZAR
+   ============================================================ */
+
+.btn-visualizar-anuncio {
+    width: 100%;
+
+    padding: 9px 10px;
+
+    background: #3498db;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.btn-visualizar-anuncio:hover {
+    background: #2980b9 !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   BOTÃO EDITAR
+   ============================================================ */
+
+.btn-editar-anuncio {
+    width: 100%;
+
+    padding: 9px 10px;
+
+    background: #77adff;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.btn-editar-anuncio:hover {
+    background: #5d96e8 !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   BOTÃO SUSPENDER
+   ============================================================ */
+
+.btn-suspender-anuncio {
+    width: 100%;
+
+    padding: 9px 10px;
+
+    background: #f39c12;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.btn-suspender-anuncio:hover {
+    background: #d68910 !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   BOTÃO EXCLUIR
+   ============================================================ */
+
+.btn-excluir-anuncio {
+    width: 100%;
+
+    padding: 9px 10px;
+
+    background: #e74c3c;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.btn-excluir-anuncio:hover {
+    background: #c0392b !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   MODAL OVERLAY
+   ============================================================ */
+
+.modal-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    backdrop-filter: blur(3px);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   FORÇAR DISPLAY FLEX
+   ============================================================ */
+
+.modal-overlay[style*="display: flex"] {
+    display: flex !important;
+}
+
+
+/* ============================================================
+   CAIXA DOS MODAIS
+   ============================================================ */
+
+.modal-box {
+    width: 100%;
+    max-width: 400px;
+
+    padding: 30px 25px;
+
+    background: #fff;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.20);
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   ÍCONE DO MODAL
+   ============================================================ */
+
+.modal-icon {
+    margin-bottom: 12px;
+
+    color: #e74c3c;
+
+    font-size: 42px;
+}
+
+
+/* ============================================================
+   TÍTULO DO MODAL
+   ============================================================ */
+
+.modal-box h3 {
+    margin: 0 0 10px;
+
+    color: #005386;
+
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   TEXTO DO MODAL
+   ============================================================ */
+
+.modal-box p {
+    margin: 0 0 25px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   BOTÕES DO MODAL
+   ============================================================ */
+
+.modal-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+.btn-modal {
+    flex: 1;
+
+    padding: 10px 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* ============================================================
+   BOTÃO CANCELAR
+   ============================================================ */
+
+.btn-cancelar {
+    background: #e2e8f0;
+
+    color: #475569;
+}
+
+
+.btn-cancelar:hover {
+    background: #cbd5e1;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   BOTÃO CONFIRMAR EXCLUSÃO
+   ============================================================ */
+
+.btn-confirmar {
+    background: #e74c3c;
+
+    color: #fff;
+}
+
+
+.btn-confirmar:hover {
+    background: #c0392b;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   BOTÃO CONFIRMAR SUSPENSÃO
+   ============================================================ */
+
+.btn-confirmar-suspensao {
+    background: #f39c12;
+
+    color: #fff;
+}
+
+
+.btn-confirmar-suspensao:hover {
+    background: #d68910;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   MODAL DE DETALHES
+   ============================================================ */
+
+.details-modal-box {
+    max-width: 550px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    text-align: left;
+}
+
+
+.details-modal-box .modal-icon {
+    margin-bottom: 8px;
+
+    color: #005386;
+
+    text-align: center;
+}
+
+
+.details-modal-box h3 {
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   CONTEÚDO DOS DETALHES
+   ============================================================ */
+
+.details-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* ============================================================
+   IMAGEM DOS DETALHES
+   ============================================================ */
+
+.details-image-container {
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+    margin-bottom: 8px;
+}
+
+
+.details-image-container img {
+    width: 100%;
+    max-width: 300px;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+}
+
+
+/* ============================================================
+   ITEM DOS DETALHES
+   ============================================================ */
+
+.detail-item {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 11px 13px;
+
+    background: #f7f9ff;
+
+    border: 1px solid #edf2f7;
+
+    border-radius: 8px;
+}
+
+
+.detail-item strong {
+    color: #005386;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.detail-item span {
+    color: #475569;
+
+    font-size: 14px;
+
+    word-break: break-word;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   BOTÃO FECHAR DETALHES
+   ============================================================ */
+
+.details-modal-box .modal-buttons {
+    margin-top: 20px;
+}
+
+
+/* ============================================================
+   MODAL DE EDITAR ANÚNCIO
+   ============================================================ */
+
+.edit-modal-box {
+    width: 100%;
+
+    max-width: 550px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    text-align: left;
+}
+
+
+/* ============================================================
+   ÍCONE EDITAR
+   ============================================================ */
+
+.edit-modal-box .edit-icon {
+    margin-bottom: 8px;
+
+    color: #3498db;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   TÍTULO EDITAR
+   ============================================================ */
+
+.edit-modal-box h3 {
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   FORMULÁRIO DE EDIÇÃO
+   IMPORTANTE:
+   O HTML usa .form-group
+   ============================================================ */
+
+#editProductForm {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* ============================================================
+   GRUPO DO FORMULÁRIO
+   ============================================================ */
+
+#editProductForm .form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    width: 100%;
+}
+
+
+/* ============================================================
+   LABELS
+   ============================================================ */
+
+#editProductForm .form-group label {
+    display: block;
+
+    color: #005386;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   INPUT
+   ============================================================ */
+
+#editProductForm .form-group input,
+#editProductForm .form-group textarea,
+#editProductForm .form-group select {
+    width: 100%;
+
+    min-height: 42px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #fff;
+
+    color: #475569;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* ============================================================
+   TEXTAREA
+   ============================================================ */
+
+#editProductForm .form-group textarea {
+    min-height: 110px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   SELECT
+   ============================================================ */
+
+#editProductForm .form-group select {
+    appearance: auto;
+
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   PLACEHOLDER
+   ============================================================ */
+
+#editProductForm .form-group input::placeholder,
+#editProductForm .form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+
+/* ============================================================
+   CAMPOS AO FOCAR
+   ============================================================ */
+
+#editProductForm .form-group input:focus,
+#editProductForm .form-group textarea:focus,
+#editProductForm .form-group select:focus {
+    border-color: #3498db;
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 3px rgba(52, 152, 219, 0.10);
+}
+
+
+/* ============================================================
+   BOTÕES DO EDITAR
+   ============================================================ */
+
+.edit-modal-box .modal-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 8px;
+}
+
+
+/* ============================================================
+   BOTÃO SALVAR ALTERAÇÕES
+   ============================================================ */
+
+.btn-confirmar-edit {
+    flex: 1;
+
+    background: #3498db;
+
+    color: #fff;
+}
+
+
+.btn-confirmar-edit:hover {
+    background: #2980b9;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   MODAL DE SUSPENSÃO
+   ============================================================ */
+
+.suspend-modal-box {
+    max-width: 420px;
+
+    text-align: center;
+}
+
+
+.suspend-modal-box .modal-icon {
+    color: #f39c12;
+}
+
+
+.suspend-modal-box h3 {
+    color: #005386;
+}
+
+
+.suspend-modal-box p {
+    color: #666;
+}
+
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+
+.toast-notification {
+    position: fixed;
+
+    top: 30px;
+    right: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 280px;
+
+    padding: 15px 22px;
+
+    background: #fff;
+
+    border-left: 5px solid #2ecc71;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+
+    color: #005386;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    z-index: 10000;
+
+    box-sizing: border-box;
+}
+
+
+.toast-notification.erro {
+    border-left-color: #e74c3c;
+
+    color: #c0392b;
+}
+
+
+.toast-notification.sucesso {
+    border-left-color: #2ecc71;
+
+    color: #005386;
+}
+
+
+.toast-notification i {
+    font-size: 20px;
+}
+
+
+.toast-notification.sucesso i {
+    color: #2ecc71;
+}
+
+
+.toast-notification.erro i {
+    color: #e74c3c;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   TELAS GRANDES
+   ------------------------------------------------------------ */
+
+@media (max-width: 1400px) {
+
+    .advertisements {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* ------------------------------------------------------------
+   TABLETS
+   ------------------------------------------------------------ */
+
+@media (max-width: 992px) {
+
+    .home,
+    .home nav {
+        left: 60px;
+
+        width: calc(100% - 60px);
+    }
+
+
+    .welcome,
+    .search-box {
+        display: none;
+    }
+
+
+    .advertisements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ------------------------------------------------------------
+   CELULARES
+   ------------------------------------------------------------ */
+
+@media (max-width: 576px) {
+
+    .home nav {
+        padding: 0 15px;
+    }
+
+
+    .advertisements {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        padding: 95px 15px 20px;
+    }
+
+
+    .advertisements .advertisement-card {
+        min-height: 370px;
+    }
+
+
+    /* MODAIS */
+
+    .modal-overlay {
+        padding: 15px;
+    }
+
+
+    .modal-box {
+        width: 100%;
+
+        padding: 25px 18px;
+    }
+
+
+    .details-modal-box,
+    .edit-modal-box,
+    .suspend-modal-box {
+        width: 100%;
+
+        max-width: none;
+
+        padding: 25px 18px;
+    }
+
+
+    /* IMAGEM */
+
+    .details-image-container img {
+        height: 180px;
+    }
+
+
+    /* DETALHES */
+
+    .detail-item span {
+        font-size: 13px;
+    }
+
+
+    /* BOTÕES */
+
+    .modal-buttons {
+        gap: 8px;
+    }
+
+
+    .btn-modal {
+        padding: 9px;
+
+        font-size: 13px;
+    }
+
+
+    /* TOAST */
+
+    .toast-notification {
+        top: 20px;
+
+        right: 15px;
+        left: 15px;
+
+        min-width: 0;
+
+        padding: 13px 15px;
+    }
+}
