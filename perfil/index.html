@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Peça por Peça | Administrador
+</title>
+
+
+<!-- ============================================================
+     FAVICON
+     ============================================================ -->
+
+<link
+    rel="icon"
+    type="image/x-icon"
+    href="src/images/favicon.ico"
+>
+
+
+<!-- ============================================================
+     SCROLLREVEAL
+     ============================================================ -->
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+
+<!-- ============================================================
+     GOOGLE FONTS
+     ============================================================ -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+>
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+
+<!-- ============================================================
+     FONT AWESOME
+     ============================================================ -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+>
+
+
+<!-- ============================================================
+     CSS PRINCIPAL
+     ============================================================ -->
+
+<link
+    rel="stylesheet"
+    href="src/styles/styles.css"
+>
+```
+
+</head>
+
+<body>
+
+```
+<!-- ============================================================
+     SIDEBAR
+     ============================================================ -->
+
+<div class="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-details">
+
+        <span class="image">
+
+            <img
+                src="src/images/logo-negativa.png"
+                alt="Logo"
+            >
+
+        </span>
+
+
+        <span class="admin">
+            Administrador
+        </span>
+
+    </div>
+
+
+<!-- MENU -->
+
+    <ul class="nav-links">
+
+
+        <!-- INÍCIO -->
+
+        <li>
+
+            <a href="../inicio/index.html">
+
+                <i class="fa-solid fa-house icon"></i>
+
+                <span class="nav-text">
+                    Início
+                </span>
+
+            </a>
+
+        </li>
+
+        <!-- DASHBOARD -->
+
+        <li>
+
+            <a href="../dashboard/index.html">
+
+                <i class="fa-solid fa-chart-column icon"></i>
+
+                <span class="nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+        </li>
+
+
+        <!-- USUÁRIOS -->
+
+        <li>
+
+            <a href="../usuarios-cadastrados/index.html">
+
+                <i class="fa-solid fa-users icon"></i>
+
+                <span class="nav-text">
+                    Usuários
+                </span>
+
+            </a>
+
+        </li>
+
+        <!-- ANÚNCIOS -->
+
+        <li>
+
+            <a href="../anuncios-publicados/index.html">
+
+                <i class="fa-solid fa-box-open"></i>
+
+                <span class="nav-text">
+                    Anúncios
+                </span>
+
+            </a>
+
+        </li>
+
+        <!-- HISTÓRICO -->
+
+        <li>
+
+            <a href="../historico/index.html">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                <span class="nav-text">
+                    Histórico
+                </span>
+
+            </a>
+        </li>
+
+        
+        <!-- CATEGORIAS -->
+
+        <li>
+
+            <a href="../categoria/index.html">
+
+                <i class="fa-solid fa-layer-group icon"></i>
+
+                <span class="nav-text">
+                    Categorias
+                </span>
+
+            </a>
+
+        </li>
+
+        <!-- CONFIGURAÇÕES -->
+
+        <li>
+
+            <a href="../configuracoes/index.html">
+
+                <i class="fa-solid fa-gear icon"></i>
+
+                <span class="nav-text">
+                    Configurações
+                </span>
+
+            </a>
+
+        </li>
+
+    </ul>
+
+
+    <!-- LOGOUT -->
+
+    <ul class="logout">
+
+        <li>
+
+            <a href="../autenticação/index.html">
+
+                <i class="fa-solid fa-right-from-bracket icon"></i>
+
+                <span class="nav-text">
+                    Sair
+                </span>
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+
+<!-- ============================================================
+     ÁREA PRINCIPAL
+     ============================================================ -->
+
+<section class="home">
+
+
+    <!-- ========================================================
+         NAVBAR
+         ======================================================== -->
+
+    <nav>
+
+
+        <!-- BOTÃO SIDEBAR -->
+
+        <div class="sidebar-button">
+
+            <i class="fa-solid fa-bars sidebarBtn"></i>
+
+            <span class="welcome">
+                Perfil
+            </span>
+
+        </div>
+
+
+        <!-- ESPAÇO -->
+
+        <div
+            class="nav-spacer"
+            style="flex: 1;"
+        >
+        </div>
+
+
+        <!-- ÍCONES -->
+
+        <div id="nav_icons">
+
+
+            <!-- NOTIFICAÇÕES -->
+
+            <button
+                class="icon-button"
+                type="button"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+            </button>
+
+
+        <!-- PERFIL -->
+
+        <div class="profile-menu-container">
+
+            <button
+                type="button"
+                class="profile-details"
+                id="btn-menu-perfil"
+                aria-expanded="false"
+                aria-controls="menu-perfil"
+            >
+                <img
+                    src="src/images/avatar1.png"
+                    alt=""
+                >
+        
+                <span class="admin-name">
+                    Zintra Find
+                </span>
+        
+                <i
+                    class="fa-solid fa-angle-down"
+                    aria-hidden="true"
+                ></i>
+            </button>
+        
+            <div
+                class="profile-dropdown"
+                id="menu-perfil"
+                hidden
+            >
+                <div class="profile-dropdown-header">
+                    <strong>Minha conta</strong>
+                    <span>Painel administrativo</span>
+                </div>
+        
+                <!-- Ajuste o endereço quando criar a página de perfil -->
+                <a href="../perfil/index.html" class="profile-menu-item">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <span>Perfil</span>
+                </a>
+        
+                <a
+                    href="../configuracoes/index.html"
+                    class="profile-menu-item"
+                >
+                    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                    <span>Configurações</span>
+                </a>
+        
+                <button
+                    type="button"
+                    class="profile-menu-item"
+                    id="btn-aparencia"
+                    aria-expanded="false"
+                    aria-controls="opcoes-aparencia"
+                >
+                    <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                    <span>Aparência</span>
+                    <i class="fa-solid fa-angle-down menu-seta" aria-hidden="true"></i>
+                </button>
+        
+                <div id="opcoes-aparencia" class="appearance-options" hidden>
+                    <label for="tema-admin">Tema do painel</label>
+        
+                    <select id="tema-admin">
+                        <option value="claro">Claro</option>
+                        <option value="escuro">Escuro</option>
+                    </select>
+                </div>
+        
+                <div class="profile-menu-divider"></div>
+        
+                <button
+                    type="button"
+                    class="profile-menu-item profile-menu-logout"
+                    id="btn-sair-perfil"
+                >
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+                    <span>Sair</span>
+                </button>
+        
+                <p id="perfil-menu-status" role="status"></p>
+            </div>
+        
+        </div>
+
+    </nav>
+</section>
+
+<!-- ============================================================
+     JQUERY
+     ============================================================ -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+>
+</script>
+
+
+<!-- ============================================================
+     JAVASCRIPT DO ADMINISTRADOR
+     ============================================================ -->
+
+<script src="src/javascript/script.js"></script>
+<script src="src/javascript/profile-menu.js"></script>
+```
+</body>
+</html>

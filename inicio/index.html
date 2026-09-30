@@ -21,11 +21,11 @@
      FAVICON
      ============================================================ -->
 
-<link
-    rel="icon"
-    type="image/x-icon"
-    href="src/images/favicon.ico"
->
+     <link
+     rel="icon"
+     type="image/x-icon"
+     href="src/images/favicon.ico"
+ >
 
 
 <!-- ============================================================
@@ -98,7 +98,7 @@
         <span class="image">
 
             <img
-                src="src/images/logo.png"
+                src="src/images/logo-negativa.png"
                 alt="Logo"
             >
 
@@ -172,7 +172,7 @@
 
             <a href="../anuncios-publicados/index.html">
 
-                <i class="fa-solid fa-box icon"></i>
+                <i class="fa-solid fa-box-open"></i>
 
                 <span class="nav-text">
                     Anúncios
@@ -195,6 +195,22 @@
                 </span>
 
             </a>
+        </li>
+
+            <!-- RELATÓRIOS -->
+
+        <li>
+
+            <a href="../relatorio/index.html">
+
+                <i class="fa-solid fa-file"></i>
+
+                <span class="nav-text">
+                    Relatórios
+                </span>
+
+            </a>
+        </li>
 
         
         <!-- CATEGORIAS -->
@@ -277,7 +293,7 @@
             <i class="fa-solid fa-bars sidebarBtn"></i>
 
             <span class="welcome">
-                Bem-Vindo(a), Zintra Find
+                Início
             </span>
 
         </div>
@@ -312,22 +328,304 @@
 
         <!-- PERFIL -->
 
-        <div class="profile-details">
+        <div class="profile-menu-container">
 
-            <img
-                src="src/images/avatar1.png"
-                alt="Perfil"
+            <button
+                type="button"
+                class="profile-details"
+                id="btn-menu-perfil"
+                aria-expanded="false"
+                aria-controls="menu-perfil"
             >
-
-            <span class="admin-name">
-                Zintra Find
-            </span>
-
-            <i class="fa-solid fa-angle-down"></i>
-
+                <img
+                    src="src/images/avatar1.png"
+                    alt=""
+                >
+        
+                <span class="admin-name">
+                    Zintra Find
+                </span>
+        
+                <i
+                    class="fa-solid fa-angle-down"
+                    aria-hidden="true"
+                ></i>
+            </button>
+        
+            <div
+                class="profile-dropdown"
+                id="menu-perfil"
+                hidden
+            >
+                <div class="profile-dropdown-header">
+                    <strong>Minha conta</strong>
+                    <span>Painel administrativo</span>
+                </div>
+        
+                <!-- Ajuste o endereço quando criar a página de perfil -->
+                <a href="../perfil/index.html" class="profile-menu-item">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <span>Perfil</span>
+                </a>
+        
+                <a
+                    href="../configuracoes/index.html"
+                    class="profile-menu-item"
+                >
+                    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                    <span>Configurações</span>
+                </a>
+        
+                <button
+                    type="button"
+                    class="profile-menu-item"
+                    id="btn-aparencia"
+                    aria-expanded="false"
+                    aria-controls="opcoes-aparencia"
+                >
+                    <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                    <span>Aparência</span>
+                    <i class="fa-solid fa-angle-down menu-seta" aria-hidden="true"></i>
+                </button>
+        
+                <div id="opcoes-aparencia" class="appearance-options" hidden>
+                    <label for="tema-admin">Tema do painel</label>
+        
+                    <select id="tema-admin">
+                        <option value="claro">Claro</option>
+                        <option value="escuro">Escuro</option>
+                    </select>
+                </div>
+        
+                <div class="profile-menu-divider"></div>
+        
+                <button
+                    type="button"
+                    class="profile-menu-item profile-menu-logout"
+                    id="btn-sair-perfil"
+                >
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+                    <span>Sair</span>
+                </button>
+        
+                <p id="perfil-menu-status" role="status"></p>
+            </div>
+        
         </div>
 
     </nav>
+
+    <!-- TELA INICIAL -->
+
+    <main class="init-container">
+
+        <header class="boas-vindas">
+            <h1>Olá, <span id="nome-admin">Administrador</span>!</h1>
+            <p>
+                Acompanhe as principais atividades do Peça por Peça.
+            </p>
+        </header>
+
+
+        <section class="resumo" aria-labelledby="titulo-resumo">
+            <h2 id="titulo-resumo">Resumo do sistema</h2>
+
+            <!-- ================= CARDS ================= -->
+
+            <div class="dashboard-cards">
+
+
+                <!-- USUÁRIOS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Usuários cadastrados
+                        </span>
+
+                        <strong id="totalUsuarios">
+                            ...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ANÚNCIOS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-box-open"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Anúncios publicados
+                        </span>
+
+                        <strong id="totalAnuncios">
+                            ...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- USUÁRIOS ATIVOS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Usuários ativos
+                        </span>
+
+                        <strong id="usuariosAtivos">
+                            ...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ANÚNCIOS DISPONÍVEIS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-box-open"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Anúncios disponíveis
+                        </span>
+
+                        <strong id="anunciosDisponiveis">
+                            ...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================================
+         ACESSO RÁPIDO
+         ======================================================== -->
+
+        <section class="acessos" aria-labelledby="titulo-acessos">
+            <h2 id="titulo-acessos">Acesso rápido</h2>
+
+            <div class="access-grid">
+                <!-- Links para as páginas de gerenciamento -->
+                 <!-- GERENCIAR USUÁRIOS -->
+
+                <div class="access-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="card-access">
+                        <span>
+                            Gerenciar Usuários
+                        </span>
+                        Visualize, edite e gerencie contas de usuáros.
+                    </div>
+                </div>
+
+                <!-- GERENCIAR ANÚNCIOS -->
+            <div class="access-card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+                <div class="card-access">
+                    <span>
+                        Gerenciar Anúncios
+                    </span>
+                    Aprove, suspenda ou remova anúncios.
+                </div>
+            </div>
+
+                <!-- VER DENÚNCIAS -->
+        <div class="access-card">
+            <div class="card-icon">
+                <i class="fa-solid fa-flag"></i>
+            </div>
+            <div class="card-access">
+                <span>
+                    Ver denúncias
+                </span>
+                Analise e tome decisões sobre denúncias.
+            </div>
+        </div>
+
+            <!-- VER HISTÓRICO -->
+        <div class="access-card">
+            <div class="card-icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="card-access">
+                <span>
+                    Ver Histórico
+                </span>
+                Acompanhe todas as atividades.
+            </div>
+        </div>
+        </div>
+
+
+
+        </section>
+
+
+        <section class="atividades" aria-labelledby="titulo-atividades">
+
+            <div class="secao-cabecalho">
+                <h2 id="titulo-atividades">Atividades recentes</h2>
+                <a href="../historico/index.html">Ver histórico</a>
+            </div>
+
+            <ul id="atividades-lista">
+                <!-- Últimas cinco atividades retornadas pela API -->
+            </ul>
+
+        </section>
+
+        <a class="link-dashboard" href="../dashboard/index.html">
+            Ver dashboard completo
+        </a>
+
 </section>
 
 <!-- ============================================================
@@ -345,6 +643,8 @@
      ============================================================ -->
 
 <script src="src/javascript/script.js"></script>
+<script src="src/javascript/profile-menu.js"></script>
+
 ```
 </body>
 </html>

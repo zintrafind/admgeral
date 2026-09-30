@@ -18,13 +18,11 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link
         rel="preconnect"
         href="https://fonts.gstatic.com"
         crossorigin
     >
-
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
@@ -40,233 +38,123 @@
     >
 
     <!-- CSS -->
-    <link
-        rel="stylesheet"
-        href="src/styles/styles.css"
-    >
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/profile-menu.css">
 </head>
-
 
 <body>
 
-
-    <!-- ===================================================== -->
-    <!-- SIDEBAR -->
-    <!-- ===================================================== -->
+    <!-- ================= SIDEBAR ================= -->
 
     <div class="sidebar">
 
         <div class="logo-details">
-
             <span class="image">
-
                 <img
-                    src="src/images/logo.png"
+                    src="src/images/logo-negativa.png"
                     alt="Logo Peça por Peça"
                 >
-
             </span>
 
             <span class="admin">
                 Administrador
             </span>
-
         </div>
 
-<!-- MENU -->
-
-    <ul class="nav-links">
-
-
-        <!-- INÍCIO -->
-
-        <li>
-
-            <a href="../inicio/index.html">
-
-                <i class="fa-solid fa-house icon"></i>
-
-                <span class="nav-text">
-                    Início
-                </span>
-
-            </a>
-
-        </li>
-
-        <!-- DASHBOARD -->
-
-        <li>
-
-            <a href="../dashboard/index.html">
-
-                <i class="fa-solid fa-chart-column icon"></i>
-
-                <span class="nav-text">
-                    Dashboard
-                </span>
-
-            </a>
-
-        </li>
-
-
-        <!-- USUÁRIOS -->
-
-        <li>
-
-            <a href="../usuarios-cadastrados/index.html">
-
-                <i class="fa-solid fa-users icon"></i>
-
-                <span class="nav-text">
-                    Usuários
-                </span>
-
-            </a>
-
-        </li>
-
-        <!-- ANÚNCIOS -->
-
-        <li>
-
-            <a href="../anuncios-publicados/index.html">
-
-                <i class="fa-solid fa-box icon"></i>
-
-                <span class="nav-text">
-                    Anúncios
-                </span>
-
-            </a>
-
-        </li>
-
-        <!-- HISTÓRICO -->
-
-        <li>
-
-            <a href="../historico/index.html">
-
-                <i class="fa-solid fa-clock-rotate-left"></i>
-
-                <span class="nav-text">
-                    Histórico
-                </span>
-
-            </a>
-
-        
-        <!-- CATEGORIAS -->
-
-        <li>
-
-            <a href="../categorias/index.html">
-
-                <i class="fa-solid fa-layer-group icon"></i>
-
-                <span class="nav-text">
-                    Categorias
-                </span>
-
-            </a>
-
-        </li>
-
-        <!-- CONFIGURAÇÕES -->
-
-        <li>
-
-            <a href="../configuracoes/index.html">
-
-                <i class="fa-solid fa-gear icon"></i>
-
-                <span class="nav-text">
-                    Configurações
-                </span>
-
-            </a>
-
-        </li>
-
-    </ul>
-
-
-    <!-- LOGOUT -->
-
-    <ul class="logout">
-
-        <li>
-
-            <a href="../autenticação/index.html">
-
-                <i class="fa-solid fa-right-from-bracket icon"></i>
-
-                <span class="nav-text">
-                    Sair
-                </span>
-
-            </a>
-
-        </li>
-
-    </ul>
-
-</div>
-
-
-
-
-    <!-- ===================================================== -->
-    <!-- CONTEÚDO PRINCIPAL -->
-    <!-- ===================================================== -->
+        <!-- MENU -->
+        <ul class="nav-links">
+
+            <li>
+                <a href="../inicio/index.html">
+                    <i class="fa-solid fa-house icon"></i>
+                    <span class="nav-text">Início</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../dashboard/index.html">
+                    <i class="fa-solid fa-chart-column icon"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="../usuarios-cadastrados/index.html"
+                    aria-current="page"
+                >
+                    <i class="fa-solid fa-users icon"></i>
+                    <span class="nav-text">Usuários</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../anuncios-publicados/index.html">
+                    <i class="fa-solid fa-box-open icon"></i>
+                    <span class="nav-text">Anúncios</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../historico/index.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span class="nav-text">Histórico</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../relatorio/index.html">
+                    <i class="fa-solid fa-file"></i>
+                    <span class="nav-text">Relatórios</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../categoria/index.html">
+                    <i class="fa-solid fa-layer-group icon"></i>
+                    <span class="nav-text">Categorias</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../configuracoes/index.html">
+                    <i class="fa-solid fa-gear icon"></i>
+                    <span class="nav-text">Configurações</span>
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- LOGOUT -->
+        <ul class="logout">
+            <li>
+                <a
+                    href="../autenticação/index.html"
+                    id="btn-logout"
+                >
+                    <i class="fa-solid fa-right-from-bracket icon"></i>
+                    <span class="nav-text">Sair</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
 
     <section class="home">
 
-
-        <!-- ================================================= -->
-        <!-- NAVBAR -->
-        <!-- ================================================= -->
+        <!-- ================= NAVBAR ================= -->
 
         <nav>
 
             <!-- TÍTULO -->
             <div class="sidebar-button">
-
                 <i class="fa-solid fa-bars sidebarBtn"></i>
-
-                <span class="welcome">
-                    Usuários Cadastrados
-                </span>
-
+                <span class="welcome">Usuários Cadastrados</span>
             </div>
 
-
-            <!-- PESQUISA -->
-            <div class="search-box">
-
-                <input
-                    type="search"
-                    id="input-pesquisa"
-                    placeholder="Pesquisar usuário..."
-                    autocomplete="off"
-                >
-
-                <button
-                    type="button"
-                    id="btn-button"
-                    aria-label="Pesquisar usuário"
-                >
-
-                    <i class="fa-solid fa-magnifying-glass"></i>
-
-                </button>
-
-            </div>
-
-
-            <!-- ÍCONES -->
+            <!-- ÍCONES E PERFIL -->
             <div id="nav_icons">
 
                 <button
@@ -274,67 +162,142 @@
                     type="button"
                     aria-label="Notificações"
                 >
-
-                    <i class="fa-regular fa-bell"></i>
-
+                    <i class="fa-regular fa-bell" aria-hidden="true"></i>
                 </button>
 
+                <!-- PERFIL DO ADMIN -->
+                <div class="profile-menu-container">
 
-            <!-- PERFIL DO ADMIN -->
-            <div class="profile-details">
+                    <button
+                        type="button"
+                        class="profile-details"
+                        id="btn-menu-perfil"
+                        aria-expanded="false"
+                        aria-controls="menu-perfil"
+                    >
+                        <img
+                            src="src/images/avatar1.png"
+                            alt=""
+                        >
 
-                <img
-                    src="src/images/avatar1.png"
-                    alt="Administrador"
-                >
+                        <span class="admin-name">
+                            Zintra Find
+                        </span>
 
-                <span class="admin-name">
-                    Zintra Find
-                </span>
+                        <i
+                            class="fa-solid fa-angle-down"
+                            aria-hidden="true"
+                        ></i>
+                    </button>
 
-                <i class="fa-solid fa-angle-down"></i>
+                    <!-- MENU SUSPENSO -->
+                    <div
+                        class="profile-dropdown"
+                        id="menu-perfil"
+                        hidden
+                    >
 
-            </div>
+                        <div class="profile-dropdown-header">
+                            <strong>Minha conta</strong>
+                            <span>Painel administrativo</span>
+                        </div>
 
-        </nav>
+                        <!-- Requer a página perfil/index.html -->
+                        <a
+                            href="../perfil/index.html"
+                            class="profile-menu-item"
+                        >
+                            <i
+                                class="fa-regular fa-user"
+                                aria-hidden="true"
+                            ></i>
+                            <span>Perfil</span>
+                        </a>
 
+                        <a
+                            href="../configuracoes/index.html"
+                            class="profile-menu-item"
+                        >
+                            <i
+                                class="fa-solid fa-gear"
+                                aria-hidden="true"
+                            ></i>
+                            <span>Configurações</span>
+                        </a>
 
+                        <button
+                            type="button"
+                            class="profile-menu-item"
+                            id="btn-aparencia"
+                            aria-expanded="false"
+                            aria-controls="opcoes-aparencia"
+                        >
+                            <i
+                                class="fa-solid fa-palette"
+                                aria-hidden="true"
+                            ></i>
 
-        <!-- ================================================= -->
-        <!-- LISTAGEM DOS USUÁRIOS -->
-        <!-- ================================================= -->
+                            <span>Aparência</span>
+
+                            <i
+                                class="fa-solid fa-angle-down menu-seta"
+                                aria-hidden="true"
+                            ></i>
+                        </button>
+
+                        <div
+                            id="opcoes-aparencia"
+                            class="appearance-options"
+                            hidden
+                        >
+                            <label for="tema-admin">
+                                Tema do painel
+                            </label>
+
+                            <select id="tema-admin">
+                                <option value="claro">Claro</option>
+                                <option value="escuro">Escuro</option>
+                            </select>
+                        </div>
+
+                        <div class="profile-menu-divider"></div>
+
+                        <button
+                            type="button"
+                            class="profile-menu-item profile-menu-logout"
+                            id="btn-sair-perfil"
+                        >
+                            <i
+                                class="fa-solid fa-right-from-bracket"
+                                aria-hidden="true"
+                            ></i>
+                            <span>Sair</span>
+                        </button>
+
+                        <p
+                            id="perfil-menu-status"
+                            role="status"
+                        ></p>
+
+                    </div><!-- Fecha profile-dropdown -->
+
+                </div><!-- Fecha profile-menu-container -->
+
+            </div><!-- Fecha nav_icons -->
+
+        </nav><!-- Fecha a navbar antes da listagem -->
+
+        <!-- ================= LISTAGEM DOS USUÁRIOS ================= -->
 
         <div class="users-container">
 
-
-            <!--
-                Os cards NÃO ficam mais escritos manualmente.
-
-                O JavaScript buscará os usuários através de:
-
-                GET /api/admin/users
-
-                e criará os cards automaticamente.
-            -->
-
-            <div
-                class="users"
-                id="users-list"
-            >
-
-
-                <!-- CARREGAMENTO -->
+            <!-- Os cards são criados pelo script.js -->
+            <div class="users" id="users-list">
 
                 <div class="users-loading">
-
                     <i class="fa-solid fa-spinner fa-spin"></i>
-
-                    <p>
-                        Carregando usuários...
-                    </p>
-
+                    <p>Carregando usuários...</p>
                 </div>
-
 
             </div>
 
@@ -342,39 +305,27 @@
 
     </section>
 
-
-
-    <!-- ===================================================== -->
-    <!-- MODAL DE CONFIRMAÇÃO / AVISO -->
-    <!-- ===================================================== -->
+    <!-- ================= MODAL DE CONFIRMAÇÃO ================= -->
 
     <div
         id="custom-modal"
         class="modal-overlay"
         style="display: none;"
     >
-
         <div class="modal-box">
-
 
             <i
                 id="modal-icon"
                 class="fa-solid fa-triangle-exclamation modal-icon"
             ></i>
 
-
-            <h3 id="modal-titulo">
-                Atenção
-            </h3>
-
+            <h3 id="modal-titulo">Atenção</h3>
 
             <p id="modal-mensagem">
                 Deseja realmente realizar esta ação?
             </p>
 
-
             <div class="modal-buttons">
-
 
                 <button
                     id="modal-btn-nao"
@@ -384,7 +335,6 @@
                     Cancelar
                 </button>
 
-
                 <button
                     id="modal-btn-sim"
                     class="btn-sim"
@@ -393,41 +343,26 @@
                     Confirmar
                 </button>
 
-
             </div>
 
         </div>
-
     </div>
 
-
-
-    <!-- ===================================================== -->
-    <!-- MODAL - DETALHES DO USUÁRIO -->
-    <!-- ===================================================== -->
+    <!-- ================= MODAL DE DETALHES ================= -->
 
     <div
         id="modal-detalhes"
         class="modal-overlay"
         style="display: none;"
     >
-
         <div class="modal-box modal-usuario">
-
-
-            <!-- CABEÇALHO -->
 
             <div class="modal-user-header">
 
-
                 <h3>
-
                     <i class="fa-solid fa-user"></i>
-
                     Detalhes do Usuário
-
                 </h3>
-
 
                 <button
                     type="button"
@@ -435,258 +370,133 @@
                     class="modal-close"
                     aria-label="Fechar"
                 >
-
                     <i class="fa-solid fa-xmark"></i>
-
                 </button>
-
 
             </div>
 
-
-
             <!-- FOTO -->
-
             <div class="modal-user-avatar">
-
                 <img
                     id="detalhe-foto"
                     src="src/images/avatar2.png"
                     alt="Foto do usuário"
                 >
-
             </div>
-
-
 
             <!-- DADOS -->
-
             <div class="modal-user-content">
 
-
                 <div class="detail-item">
-
                     <span class="detail-label">
-
                         <i class="fa-solid fa-hashtag"></i>
-
                         ID
-
                     </span>
-
-                    <span id="detalhe-id">
-                        -
-                    </span>
-
+                    <span id="detalhe-id">-</span>
                 </div>
 
-
                 <div class="detail-item">
-
                     <span class="detail-label">
-
                         <i class="fa-solid fa-user"></i>
-
                         Nome
-
                     </span>
-
-                    <span id="detalhe-nome">
-                        -
-                    </span>
-
+                    <span id="detalhe-nome">-</span>
                 </div>
 
-
                 <div class="detail-item">
-
                     <span class="detail-label">
-
                         <i class="fa-solid fa-envelope"></i>
-
                         E-mail
-
                     </span>
-
-                    <span id="detalhe-email">
-                        -
-                    </span>
-
+                    <span id="detalhe-email">-</span>
                 </div>
 
-
                 <div class="detail-item">
-
                     <span class="detail-label">
-
                         <i class="fa-solid fa-shield"></i>
-
                         Tipo de usuário
-
                     </span>
-
-                    <span id="detalhe-tipo">
-                        -
-                    </span>
-
+                    <span id="detalhe-tipo">-</span>
                 </div>
 
-
                 <div class="detail-item">
-
                     <span class="detail-label">
-
                         <i class="fa-solid fa-circle-check"></i>
-
                         Status
-
                     </span>
-
-                    <span id="detalhe-status">
-                        -
-                    </span>
-
+                    <span id="detalhe-status">-</span>
                 </div>
-
 
                 <div class="detail-item">
-
                     <span class="detail-label">
-
                         <i class="fa-solid fa-envelope-circle-check"></i>
-
                         E-mail verificado
-
                     </span>
-
-                    <span id="detalhe-email-verificado">
-                        -
-                    </span>
-
+                    <span id="detalhe-email-verificado">-</span>
                 </div>
-
 
                 <div class="detail-item detail-full">
-
                     <span class="detail-label">
-
                         <i class="fa-solid fa-address-card"></i>
-
                         Descrição
-
                     </span>
-
-                    <span id="detalhe-descricao">
-                        -
-                    </span>
-
+                    <span id="detalhe-descricao">-</span>
                 </div>
 
-
                 <div class="detail-item">
-
                     <span class="detail-label">
-
-                        <i class="fa-solid fa-box"></i>
-
+                        <i class="fa-solid fa-box-open"></i>
                         Anúncios
-
                     </span>
-
-                    <span id="detalhe-anuncios">
-                        0
-                    </span>
-
+                    <span id="detalhe-anuncios">0</span>
                 </div>
 
-
                 <div class="detail-item">
-
                     <span class="detail-label">
-
                         <i class="fa-solid fa-right-left"></i>
-
                         Trocas / propostas
-
                     </span>
-
-                    <span id="detalhe-trocas">
-                        0
-                    </span>
-
+                    <span id="detalhe-trocas">0</span>
                 </div>
-
 
                 <div class="detail-item">
-
                     <span class="detail-label">
-
                         <i class="fa-solid fa-calendar-days"></i>
-
                         Cadastrado em
-
                     </span>
-
-                    <span id="detalhe-data">
-                        -
-                    </span>
-
+                    <span id="detalhe-data">-</span>
                 </div>
-
 
             </div>
 
-
-
-            <!-- BOTÃO -->
-
             <div class="modal-user-footer">
-
                 <button
                     type="button"
                     id="btn-detalhes-fechar"
                     class="btn-modal-primary"
                 >
-
                     Fechar
-
                 </button>
-
             </div>
 
-
         </div>
-
     </div>
 
-
-
-    <!-- ===================================================== -->
-    <!-- MODAL - EDITAR USUÁRIO -->
-    <!-- ===================================================== -->
+    <!-- ================= MODAL DE EDIÇÃO ================= -->
 
     <div
         id="modal-editar"
         class="modal-overlay"
         style="display: none;"
     >
-
         <div class="modal-box modal-usuario">
-
-
-            <!-- CABEÇALHO -->
 
             <div class="modal-user-header">
 
-
                 <h3>
-
                     <i class="fa-solid fa-user-pen"></i>
-
                     Editar Usuário
-
                 </h3>
-
 
                 <button
                     type="button"
@@ -694,42 +504,22 @@
                     class="modal-close"
                     aria-label="Fechar"
                 >
-
                     <i class="fa-solid fa-xmark"></i>
-
                 </button>
-
 
             </div>
 
-
-
-            <!-- FORMULÁRIO -->
-
             <form id="form-editar-usuario">
 
-
-                <!-- ID ESCONDIDO -->
-
-                <input
-                    type="hidden"
-                    id="editar-id"
-                >
-
-
+                <input type="hidden" id="editar-id">
 
                 <!-- NOME -->
-
                 <div class="form-group">
 
                     <label for="editar-nome">
-
                         <i class="fa-solid fa-user"></i>
-
                         Nome
-
                     </label>
-
 
                     <input
                         type="text"
@@ -740,20 +530,13 @@
 
                 </div>
 
-
-
-                <!-- EMAIL -->
-
+                <!-- E-MAIL -->
                 <div class="form-group">
 
                     <label for="editar-email">
-
                         <i class="fa-solid fa-envelope"></i>
-
                         E-mail
-
                     </label>
-
 
                     <input
                         type="email"
@@ -764,52 +547,28 @@
 
                 </div>
 
-
-
                 <!-- TIPO -->
-
                 <div class="form-group">
 
                     <label for="editar-tipo">
-
                         <i class="fa-solid fa-shield"></i>
-
                         Tipo de usuário
-
                     </label>
 
-
-                    <select
-                        id="editar-tipo"
-                        required
-                    >
-
-                        <option value="C">
-                            Cliente
-                        </option>
-
-                        <option value="A">
-                            Administrador
-                        </option>
-
+                    <select id="editar-tipo" required>
+                        <option value="C">Cliente</option>
+                        <option value="A">Administrador</option>
                     </select>
 
                 </div>
 
-
-
                 <!-- DESCRIÇÃO -->
-
                 <div class="form-group">
 
                     <label for="editar-descricao">
-
                         <i class="fa-solid fa-address-card"></i>
-
                         Descrição
-
                     </label>
-
 
                     <textarea
                         id="editar-descricao"
@@ -819,57 +578,38 @@
 
                 </div>
 
-
-
                 <!-- BOTÕES -->
-
                 <div class="form-actions">
-
 
                     <button
                         type="button"
                         id="btn-cancelar-edicao"
                         class="btn-cancelar-edicao"
                     >
-
                         Cancelar
-
                     </button>
-
 
                     <button
                         type="submit"
                         class="btn-salvar-edicao"
                     >
-
                         <i class="fa-solid fa-floppy-disk"></i>
-
                         Salvar alterações
-
                     </button>
-
 
                 </div>
 
-
             </form>
 
-
         </div>
-
     </div>
 
-
-
-    <!-- ===================================================== -->
-    <!-- JAVASCRIPT -->
-    <!-- ===================================================== -->
+    <!-- ================= JAVASCRIPT ================= -->
 
     <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 
     <script src="src/javascript/script.js"></script>
-
+    <script src="src/javascript/profile-menu.js"></script>
 
 </body>
-
 </html>

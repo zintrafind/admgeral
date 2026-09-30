@@ -98,7 +98,7 @@
         <span class="image">
 
             <img
-                src="src/images/logo.png"
+                src="src/images/logo-negativa.png"
                 alt="Logo"
             >
 
@@ -172,7 +172,7 @@
 
             <a href="../anuncios-publicados/index.html">
 
-                <i class="fa-solid fa-box"></i>
+                <i class="fa-solid fa-box-open"></i>
 
                 <span class="nav-text">
                     Anúncios
@@ -195,6 +195,23 @@
                 </span>
 
             </a>
+        </li>
+
+          <!-- RELATÓRIOS -->
+
+          <li>
+
+            <a href="../relatorio/index.html">
+
+                <i class="fa-solid fa-file"></i>
+
+                <span class="nav-text">
+                    Relatórios
+                </span>
+
+            </a>
+        </li>
+
 
         
         <!-- CATEGORIAS -->
@@ -278,7 +295,7 @@
             <i class="fa-solid fa-bars sidebarBtn"></i>
 
             <span class="welcome">
-                Bem-Vindo(a), Zintra Find
+                Categorias
             </span>
 
         </div>
@@ -312,19 +329,92 @@
 
         <!-- PERFIL -->
 
-        <div class="profile-details">
+        <div class="profile-menu-container">
 
-            <img
-                src="src/images/avatar1.png"
-                alt="Perfil"
+            <button
+                type="button"
+                class="profile-details"
+                id="btn-menu-perfil"
+                aria-expanded="false"
+                aria-controls="menu-perfil"
             >
-
-            <span class="admin-name">
-                Zintra Find
-            </span>
-
-            <i class="fa-solid fa-angle-down"></i>
-
+                <img
+                    src="src/images/avatar1.png"
+                    alt=""
+                >
+        
+                <span class="admin-name">
+                    Zintra Find
+                </span>
+        
+                <i
+                    class="fa-solid fa-angle-down"
+                    aria-hidden="true"
+                ></i>
+            </button>
+        
+            <div
+                class="profile-dropdown"
+                id="menu-perfil"
+                hidden
+            >
+                <div class="profile-dropdown-header">
+                    <strong>Minha conta</strong>
+                    <span>Painel administrativo</span>
+                </div>
+        
+                <!-- Ajuste o endereço quando criar a página de perfil -->
+                <a href="../perfil/index.html" class="profile-menu-item">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <span>Perfil</span>
+                </a>
+        
+                <a
+                    href="../configuracoes/index.html"
+                    class="profile-menu-item"
+                >
+                    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                    <span>Configurações</span>
+                </a>
+        
+                <button
+                    type="button"
+                    class="profile-menu-item"
+                    id="btn-aparencia"
+                    aria-expanded="false"
+                    aria-controls="opcoes-aparencia"
+                >
+                    <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                    <span>Aparência</span>
+                    <i class="fa-solid fa-angle-down menu-seta" aria-hidden="true"></i>
+                </button>
+        
+                <div id="opcoes-aparencia" class="appearance-options" hidden>
+                    <label for="tema-admin">Tema do painel</label>
+        
+                    <select id="tema-admin">
+                        <option value="claro">Claro</option>
+                        <option value="escuro">Escuro</option>
+                    </select>
+                </div>
+        
+                <div class="profile-menu-divider"></div>
+        
+                <button
+                    type="button"
+                    class="profile-menu-item profile-menu-logout"
+                    id="btn-sair-perfil"
+                >
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+                    <span>Sair</span>
+                </button>
+        
+                <p id="perfil-menu-status" role="status"></p>
+            </div>
+        
         </div>
 
     </nav>
@@ -344,6 +434,7 @@
      ============================================================ -->
 
 <script src="src/javascript/script.js"></script>
+<script src="src/javascript/profile-menu.js"></script>
 ```
 
 </body>

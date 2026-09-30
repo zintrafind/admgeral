@@ -107,6 +107,10 @@
     color: #E4F8FF;
 }
 
+.sidebar .logout:hover {
+    background: #0099FF;
+}
+
 .sidebar .logout li {
     height: 50px;
     width: 100%;

@@ -1,0 +1,464 @@
+/* ============================================================
+   PÁGINA INICIAL — RESUMO
+   ============================================================ */
+
+   .init-container {
+    --azul-principal: #0099ff;
+    --azul-escuro: #005386;
+    --texto: #163b56;
+    --texto-suave: #668096;
+    --borda: #e3edf5;
+
+    min-height: 100vh;
+    padding: 104px 28px 32px;
+    background: linear-gradient(135deg, #f5faff, #eaf4fc);
+    color: var(--texto);
+    font-family: "Poppins", sans-serif;
+}
+
+.init-container,
+.init-container * {
+    box-sizing: border-box;
+}
+
+.init-container h1,
+.init-container h2,
+.init-container h3,
+.init-container p {
+    margin: 0;
+}
+
+.init-container a {
+    text-decoration: none;
+}
+
+.init-container a:focus-visible {
+    outline: 3px solid var(--azul-principal);
+    outline-offset: 4px;
+}
+
+/* ============================================================
+   BOAS-VINDAS
+   ============================================================ */
+
+.init-container .boas-vindas {
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+    margin-bottom: 26px;
+    border: 1px solid #dcecf9;
+    border-radius: 20px;
+    background: linear-gradient(110deg, #ffffff, #deefff);
+}
+
+.init-container .boas-vindas::after {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    right: -60px;
+    bottom: -135px;
+    border-radius: 50%;
+    background: rgba(0, 153, 255, 0.09);
+    pointer-events: none;
+}
+
+.init-container .boas-vindas h1 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 8px;
+    color: var(--azul-escuro);
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.init-container .boas-vindas p {
+    position: relative;
+    z-index: 1;
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   TÍTULOS DAS SEÇÕES
+   ============================================================ */
+
+.init-container .resumo,
+.init-container .acessos {
+    margin-bottom: 28px;
+}
+
+.init-container h2 {
+    margin-bottom: 16px;
+    color: var(--azul-escuro);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* ==================== CARDS ==================== */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 125px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+}
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    border-radius: 12px;
+    background: #eaf4fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon i {
+    font-size: 23px;
+    color: #005386;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-info span {
+    color: #666;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.card-info strong {
+    color: #005386;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   ACESSO RÁPIDO
+   ============================================================ */
+
+.init-container .access-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.init-container .access-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    padding: 20px;
+    color: var(--texto);
+    background: #ffffff;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.init-container .access-card:hover {
+    transform: translateY(-3px);
+    border-color: #a6d9ff;
+    box-shadow: 0 8px 22px rgba(0, 83, 134, 0.08);
+}
+
+.access-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.access-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 125px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.access-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+}
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    border-radius: 12px;
+    background: #eaf4fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon i {
+    font-size: 23px;
+    color: #005386;
+}
+
+.card-access span {
+    display: block;
+    margin-bottom: 6px;
+    color: #005386;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-access {
+    color: #414141;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* .init-container .acesso-icone {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+    font-size: 20px;
+}
+
+.init-container .acesso-card h3 {
+    margin-bottom: 5px;
+    color: var(--azul-escuro);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.init-container .acesso-card p {
+    color: var(--texto-suave);
+    font-size: 11px;
+    line-height: 1.6;
+}
+ */
+
+
+/* ============================================================
+   ATIVIDADES RECENTES
+   ============================================================ */
+
+.init-container .atividades {
+    overflow: hidden;
+    margin-bottom: 24px;
+    background: #ffffff;
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 83, 134, 0.04);
+}
+
+.init-container .secao-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.init-container .secao-cabecalho h2 {
+    margin: 0;
+}
+
+.init-container .secao-cabecalho a {
+    color: var(--azul-principal);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.init-container .secao-cabecalho a:hover {
+    text-decoration: underline;
+}
+
+.init-container #atividades-lista {
+    margin: 0;
+    padding: 0 24px;
+    list-style: none;
+}
+
+.init-container .atividade-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px 0;
+    border-bottom: 1px solid #edf3f8;
+}
+
+.init-container .atividade-item:last-child {
+    border-bottom: none;
+}
+
+.init-container .atividade-icone {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 17px;
+}
+
+.init-container .atividade-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.init-container .atividade-info h3 {
+    margin-bottom: 4px;
+    color: var(--texto);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.init-container .atividade-info p {
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.init-container .atividade-data {
+    flex-shrink: 0;
+    color: var(--texto-suave);
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.init-container .estado-lista {
+    padding: 28px 12px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    text-align: center;
+}
+
+/* ============================================================
+   LINK PARA O DASHBOARD
+   ============================================================ */
+
+.init-container .link-dashboard {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 46px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    color: #ffffff;
+    background: var(--azul-principal);
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.init-container .link-dashboard:hover {
+    background: #007ed4;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 1200px) {
+    .init-container .resumo-cards,
+    .init-container .acessos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .init-container {
+        padding: 96px 18px 24px;
+    }
+
+    .init-container .boas-vindas {
+        padding: 24px;
+    }
+
+    .init-container .resumo-cards,
+    .init-container .acessos-grid {
+        gap: 12px;
+    }
+
+    .init-container .resumo-card,
+    .init-container .acesso-card {
+        padding: 18px 14px;
+        gap: 12px;
+    }
+
+    .init-container .card-valor {
+        font-size: 26px;
+    }
+
+    .init-container .secao-cabecalho {
+        padding: 18px;
+    }
+
+    .init-container #atividades-lista {
+        padding: 0 18px;
+    }
+
+    .init-container .atividade-item {
+        flex-wrap: wrap;
+    }
+
+    .init-container .atividade-data {
+        width: 100%;
+        padding-left: 54px;
+    }
+}
+
+@media (max-width: 480px) {
+    .init-container .resumo-cards,
+    .init-container .acessos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .init-container .boas-vindas {
+        padding: 22px 18px;
+    }
+
+    .init-container .link-dashboard {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .init-container .acesso-card,
+    .init-container .link-dashboard {
+        transition: none;
+    }
+
+    .init-container .acesso-card:hover {
+        transform: none;
+    }
+}

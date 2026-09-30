@@ -1,4 +1,4 @@
-/* ==================== SIDEBAR ==================== */
+ /* ==================== SIDEBAR ==================== */
 
 const sidebar = document.querySelector(".sidebar");
 const sidebarBtn = document.querySelector(".sidebarBtn");

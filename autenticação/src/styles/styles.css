@@ -78,7 +78,7 @@ form {
 .input-box input {
   width: 100%;
   padding: 13px 50px 13px 20px;
-  background: #005386;
+  background: #E4F8FF;
   border-radius: 8px;
   border: none;
   outline: none;
@@ -98,7 +98,7 @@ form {
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
-  color: #005386;
+  color: #E4F8FF;
 }
 
 
@@ -123,7 +123,7 @@ form {
 }
 
 p{
-color: #005386;
+color: #E4F8FF;
 }
 
 .custom-popup {

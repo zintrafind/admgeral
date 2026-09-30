@@ -1,0 +1,218 @@
+/* MENU DO PERFIL */
+
+.profile-menu-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.home nav .profile-details {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.profile-details:focus-visible,
+.profile-menu-item:focus-visible,
+.appearance-options select:focus-visible {
+    outline: 3px solid #0099ff;
+    outline-offset: 3px;
+}
+
+.profile-details > .fa-angle-down {
+    transition: transform 0.2s ease;
+}
+
+.profile-details[aria-expanded="true"] > .fa-angle-down {
+    transform: rotate(180deg);
+}
+
+.profile-dropdown[hidden],
+.appearance-options[hidden] {
+    display: none;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 250px;
+    max-width: calc(100vw - 32px);
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #e0eaf2;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0, 53, 86, 0.16);
+    z-index: 1100;
+}
+
+.profile-dropdown-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.profile-dropdown-header strong {
+    color: #005386;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profile-dropdown-header span {
+    color: #718293;
+    font-size: 11px;
+}
+
+.profile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 44px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #005386;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-menu-item:hover {
+    background: #eaf5ff;
+}
+
+.profile-menu-item > i {
+    width: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.profile-menu-item .menu-seta {
+    margin-left: auto;
+    font-size: 12px;
+}
+
+.profile-menu-divider {
+    height: 1px;
+    margin: 7px 4px;
+    background: #edf2f7;
+}
+
+.profile-menu-logout {
+    color: #c0392b;
+}
+
+.profile-menu-logout:hover {
+    background: #fff0ee;
+}
+
+.profile-menu-item:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.appearance-options {
+    padding: 8px 12px 14px;
+}
+
+.appearance-options label {
+    display: block;
+    margin-bottom: 7px;
+    color: #617487;
+    font-size: 11px;
+}
+
+.appearance-options select {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #cbdce9;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #005386;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+#perfil-menu-status:empty {
+    display: none;
+}
+
+#perfil-menu-status {
+    padding: 8px 12px;
+    color: #c0392b;
+    font-size: 12px;
+}
+
+/* Mantém o menu acima do conteúdo da página */
+
+.home nav {
+    z-index: 900;
+}
+
+/* TEMA ESCURO — ELEMENTOS PRINCIPAIS DO PAINEL */
+
+html[data-tema="escuro"] body,
+html[data-tema="escuro"] .home,
+html[data-tema="escuro"] .home nav,
+html[data-tema="escuro"] .inicio-container,
+html[data-tema="escuro"] .init-container {
+    background: #101e2c;
+    color: #e6eff8;
+}
+
+html[data-tema="escuro"] .home nav .profile-details,
+html[data-tema="escuro"] .profile-dropdown,
+html[data-tema="escuro"] .appearance-options select,
+html[data-tema="escuro"] .dashboard-card,
+html[data-tema="escuro"] .dashboard-panel,
+html[data-tema="escuro"] .init-container .access-card,
+html[data-tema="escuro"] .inicio-container .resumo-card,
+html[data-tema="escuro"] .inicio-container .acesso-card,
+html[data-tema="escuro"] .inicio-container .atividades {
+    background: #1a2c3e;
+    border-color: #32485f;
+    color: #e6eff8;
+}
+
+html[data-tema="escuro"] .profile-dropdown-header strong,
+html[data-tema="escuro"] .profile-menu-item,
+html[data-tema="escuro"] .appearance-options select,
+html[data-tema="escuro"] .home nav .admin-name,
+html[data-tema="escuro"] .home nav .profile-details i,
+html[data-tema="escuro"] .home nav .welcome,
+html[data-tema="escuro"] .home nav .sidebarBtn,
+html[data-tema="escuro"] .home nav .icon-button,
+html[data-tema="escuro"] .dashboard-header h1,
+html[data-tema="escuro"] .card-info strong,
+html[data-tema="escuro"] .panel-header h2,
+html[data-tema="escuro"] .card-access span {
+    color: #d9edff;
+}
+
+html[data-tema="escuro"] .profile-dropdown-header span,
+html[data-tema="escuro"] .appearance-options label,
+html[data-tema="escuro"] .dashboard-header p,
+html[data-tema="escuro"] .panel-content p,
+html[data-tema="escuro"] .card-info span,
+html[data-tema="escuro"] .card-access {
+    color: #b5c8da;
+}
+
+html[data-tema="escuro"] .profile-menu-item:hover {
+    background: #29435b;
+}
+
+html[data-tema="escuro"] .profile-menu-logout,
+html[data-tema="escuro"] #perfil-menu-status {
+    color: #ffaaa0;
+}
+
+html[data-tema="escuro"] .profile-menu-divider {
+    background: #32485f;
+}
